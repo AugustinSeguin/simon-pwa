@@ -29,12 +29,14 @@ body {
   flex-direction: row;
 }
 
+/* ThemeButton component */
 .theme-button {
   display: flex;
   justify-content: start;
   align-items: start;
 }
 
+/* App component */
 .card {
   width: 600px;
   height: 600px;
@@ -95,16 +97,60 @@ body {
   }
 }
 
+/* InputName component */
+.input-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+
+  input {
+    width: 300px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: #4CAF50;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #45a049;
+    }
+
+    &:active {
+      background-color: #3e8e41;
+    }
+  }
+}
+
+/* Animation for the active class */
 @keyframes animationActive {
   from {
-      filter:  brightness(100%);
+    filter: brightness(100%);
   }
 
   50% {
-    filter:  brightness(50%);
+    filter: brightness(50%);
   }
 
   to {
-    filter:  brightness(100%);
+    filter: brightness(100%);
   }
 }

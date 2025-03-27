@@ -45,7 +45,7 @@ Puis l'utilisateur doit reproduire la séquence en cliquant sur les couleurs Si 
 - la vibration à chaque nouvelle couleur lors de la séquence 
 <!-- - une notification locale à la fin de la partie avec le score  -->
 - la possibilité de saisir une couleur en la dictant plutôt qu'en cliquant sur la pastille 
-- stockage des meilleurs scores en local storage 
+<!-- - stockage des meilleurs scores en local storage  -->
 <!-- - un mode "dark" pour l'application en fonction de la luminosité ambiante  -->
 <!-- - un son pour chaque couleur -->
 
