@@ -7,10 +7,6 @@ export default defineConfig({
     react(),
     VitePWA({ 
       registerType: 'autoUpdate',
-      manifest: {
-        name: 'My App',
-        background_color: "#ff0000"
-      }
     })
-  ]
+  ],
 })

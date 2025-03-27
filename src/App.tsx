@@ -1,4 +1,6 @@
 import { useCallback, useState, useEffect } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import './App.scss'
 
 function App() {
@@ -11,18 +13,18 @@ function App() {
   const [isError, setIsError] = useState(false)
   const [buttonMessage, setButtonMessage] = useState<string>("Commencer le jeu")
 
+  const playSound = (color: string) => {
+    const audio = new Audio(`/sounds/${color}.mp3`)
+    audio.play()
+  }
+
   const clickButton = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLButtonElement
     const targetId = target.id
+    playSound(targetId) 
     if (playCount < historyColor.length) {
       if (targetId !== historyColor[playCount]) {
-        setMessage("Perdu !")
-        setIsError(true)
-        setPlayCount(0)
-        setCount(0)
-        setHistoryColor([])
-        setIsStarted(false)
-        setButtonMessage("Recommencer le jeu")
+        looseGame()
       }
     }
     if (playCount + 1 == historyColor.length) {
@@ -30,8 +32,27 @@ function App() {
       setIsStarted(false)
       setButtonMessage("Level up !")
     }
-    setPlayCount(playCount + 1);
+    setPlayCount(playCount + 1)
   }, [historyColor, playCount, buttonMessage, isStarted, isError, message])
+
+  const looseGame = useCallback(() => {
+    toast.error(`Vous avez perdu au tour ${count} !`, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
+    setMessage("Perdu !")
+    setIsError(true)
+    setPlayCount(0)
+    setCount(0)
+    setHistoryColor([])
+    setIsStarted(false)
+    setButtonMessage("Recommencer le jeu")
+  }, [])
 
   const addColor = useCallback(() => {
     setPlayCount(0)
@@ -63,7 +84,8 @@ function App() {
   }, [historyColor, count])
 
   return (
-    <>
+    <div className='App'>
+      <ToastContainer /> 
       <h1>Simon Game</h1>
       <hr />
       <h2>Niveau : {count}</h2>
@@ -112,7 +134,7 @@ function App() {
           ></button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

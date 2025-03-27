@@ -36,14 +36,16 @@ export default defineConfig({
 Cahier des charges
 1 - Ajoutez l'implémentation du jeu du Simon Quatres couleurs sont disponibles : rouge, vert, bleu, jaune
 
-Le jeu doit afficher une séquence de couleurs à l'utilisateur 
+<!-- Le jeu doit afficher une séquence de couleurs à l'utilisateur 
 
-Puis l'utilisateur doit reproduire la séquence en cliquant sur les couleurs Si l'utilisateur se trompe, la partie est terminée Si l'utilisateur réussi, la séquence est augmentée d'une couleur 
+Puis l'utilisateur doit reproduire la séquence en cliquant sur les couleurs Si l'utilisateur se trompe, la partie est terminée Si l'utilisateur réussi, la séquence est augmentée d'une couleur  -->
 
 2 - Ajoutez des fonctionnalités "progressives" comme : 
 
 - la vibration à chaque nouvelle couleur lors de la séquence 
-- une notification locale à la fin de la partie avec le score 
+<!-- - une notification locale à la fin de la partie avec le score  -->
 - la possibilité de saisir une couleur en la dictant plutôt qu'en cliquant sur la pastille 
-- stockage des meilleurs scores en local storage - un mode "dark" pour l'application en fonction de la luminosité ambiante - un son pour chaque couleur
+- stockage des meilleurs scores en local storage 
+<!-- - un mode "dark" pour l'application en fonction de la luminosité ambiante  -->
+<!-- - un son pour chaque couleur -->
 
