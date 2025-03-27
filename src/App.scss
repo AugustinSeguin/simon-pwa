@@ -1,0 +1,80 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+  border: 1px solid #ccc;
+
+  .active {
+    animation: animationActive 1s ease-in-out;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    #green {
+      background-color: #4CAF50;
+      color: white;
+      width: 250px;
+      height: 250px;
+      border-top-left-radius: 50%;
+    }
+
+    #red {
+      background-color: #f44336;
+      color: white;
+      width: 250px;
+      height: 250px;
+      border-top-right-radius: 50%;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    #yellow {
+      background-color: #babd1b;
+      color: white;
+      width: 250px;
+      height: 250px;
+      border-bottom-left-radius: 50%;
+    }
+
+    #blue {
+      background-color: #4f92eb;
+      color: white;
+      width: 250px;
+      height: 250px;
+      border-bottom-right-radius: 50%;
+    }
+  }
+}
+
+@keyframes animationActive {
+  from {
+      filter:  brightness(100%);
+  }
+
+  50% {
+    filter:  brightness(50%);
+  }
+
+  to {
+    filter:  brightness(100%);
+  }
+}
