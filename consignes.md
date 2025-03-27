@@ -34,7 +34,7 @@ export default defineConfig({
 
 
 Cahier des charges
-1 - Ajoutez l'implémentation du jeu du Simon Quatres couleurs sont disponibles : rouge, vert, bleu, jaune
+<!-- 1 - Ajoutez l'implémentation du jeu du Simon Quatres couleurs sont disponibles : rouge, vert, bleu, jaune -->
 
 <!-- Le jeu doit afficher une séquence de couleurs à l'utilisateur 
 
